@@ -1,0 +1,2 @@
+# game_dev_double_plus_list
+ゲーム発展国の情報を早く見れる一覧をつくりたいな。
