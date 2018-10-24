@@ -1,4 +1,4 @@
-export default = [
+export default () => [
   {
     "name": "散歩",
     "id": 0

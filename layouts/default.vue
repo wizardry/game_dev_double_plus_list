@@ -1,10 +1,16 @@
 <template>
   <div>
+    <header class="pageHeader">
+      <h1>ゲーム発展国++ データ早見表</h1>
+    </header>
     <nuxt/>
+    <footer class="pageFooter">
+      dev by @wiz_rein
+    </footer>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -19,6 +25,18 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.pageHeader {
+  padding: 4px 8px;
+  background:#f2f2f2;
+  border-bottom: 1px solid #ccc;
+
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #434343;
+  }
 }
 
 .button--green {

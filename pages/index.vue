@@ -1,33 +1,42 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        {{ name }}
-      </h1>
-      <h2 class="subtitle">
-        {{ description }}
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <company-filter/>
+      <hr />
+      <accordion-list
+        label="傑作一覧"
+      >
+        <popularity-filter type="genre" />
+        <popularity-filter type="contents" />
+        <data-list type="masterpiece" />
+      </accordion-list>
+      <accordion-list
+        label="内容解放方法"
+      >
+        <job-selector/>
+        <data-list type="releaseContents" />
+      </accordion-list>
+      <fixed-status/>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import FixedStatus from '~/components/FixedStatus.vue'
+import AccordionList from '~/components/AccordionList.vue'
+import CompanyFilter from '~/components/CompanyFilter.vue'
+import DataList from '~/components/DataList.vue'
+import JobSelector from '~/components/JobSelector.vue'
+import PopularityFilter from '~/components/PopularityFilter.vue'
 
 export default {
   components: {
-    AppLogo
+    FixedStatus,
+    AccordionList,
+    CompanyFilter,
+    DataList,
+    JobSelector,
+    PopularityFilter,
   }
 }
 </script>

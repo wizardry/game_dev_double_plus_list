@@ -1,4 +1,4 @@
-export default = [
+export default () => [
   {
     "id": 0,
     "class": "プログラマー",

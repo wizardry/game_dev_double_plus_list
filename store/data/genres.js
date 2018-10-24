@@ -1,4 +1,4 @@
-export default = [
+export default () => [
   {
     "name": "RPG",
     "popularity": 2,
