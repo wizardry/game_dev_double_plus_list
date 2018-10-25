@@ -43,6 +43,7 @@ export default {
   mounted() {
     console.log(this.$store)
     this.$store.commit('data/init');
+    console.log(this.$store.getters['data/filterdGenres']);
   }
 }
 </script>
