@@ -1,19 +1,19 @@
 <template>
   <section class="container">
     <div>
-      <company-filter/>
+      <filter-selector type="companies"/>
       <hr />
       <accordion-list
         label="傑作一覧"
       >
-        <popularity-filter type="genre" />
-        <popularity-filter type="contents" />
+        <filter-selector type="genres" />
+        <filter-selector type="contents" />
         <data-list type="masterpiece" />
       </accordion-list>
       <accordion-list
         label="内容解放方法"
       >
-        <job-selector/>
+        <filter-selector type="jobs"/>
         <data-list type="releaseContents" />
       </accordion-list>
       <fixed-status/>
@@ -24,9 +24,10 @@
 <script>
 import FixedStatus from '~/components/FixedStatus.vue'
 import AccordionList from '~/components/AccordionList.vue'
-import CompanyFilter from '~/components/CompanyFilter.vue'
 import DataList from '~/components/DataList.vue'
 import JobSelector from '~/components/JobSelector.vue'
+import FilterSelector from '~/components/FilterSelector.vue'
+import CompanyFilter from '~/components/CompanyFilter.vue'
 import PopularityFilter from '~/components/PopularityFilter.vue'
 
 export default {
@@ -35,8 +36,13 @@ export default {
     AccordionList,
     CompanyFilter,
     DataList,
+    FilterSelector,
     JobSelector,
     PopularityFilter,
+  },
+  mounted() {
+    console.log(this.$store)
+    this.$store.commit('data/init');
   }
 }
 </script>

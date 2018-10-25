@@ -1,7 +1,7 @@
 export default () => [
   {
     "id": 0,
-    "class": "プログラマー",
+    "name": "プログラマー",
     "dev_count": [
       0,
       0,
@@ -12,7 +12,7 @@ export default () => [
   },
   {
     "id": 1,
-    "class": "シナリオライター",
+    "name": "シナリオライター",
     "dev_count": [
       0,
       0,
@@ -23,7 +23,7 @@ export default () => [
   },
   {
     "id": 2,
-    "class": "デザイナー",
+    "name": "デザイナー",
     "dev_count": [
       0,
       0,
@@ -34,7 +34,7 @@ export default () => [
   },
   {
     "id": 3,
-    "class": "サウンドクリエイター",
+    "name": "サウンドクリエイター",
     "dev_count": [
       0,
       0,
@@ -45,7 +45,7 @@ export default () => [
   },
   {
     "id": 4,
-    "class": "ディレクター",
+    "name": "ディレクター",
     "dev_count": [
       0,
       0,
@@ -56,7 +56,7 @@ export default () => [
   },
   {
     "id": 5,
-    "class": "プロデューサー",
+    "name": "プロデューサー",
     "dev_count": [
       0,
       0,
@@ -67,7 +67,7 @@ export default () => [
   },
   {
     "id": 6,
-    "class": "ハードエンジニア",
+    "name": "ハードエンジニア",
     "dev_count": [
       0,
       0,
@@ -78,7 +78,7 @@ export default () => [
   },
   {
     "id": 7,
-    "class": "スーパーハッカー",
+    "name": "スーパーハッカー",
     "dev_count": [
       0,
       0,

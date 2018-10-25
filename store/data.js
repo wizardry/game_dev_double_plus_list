@@ -3,11 +3,17 @@ import genres from'./data/genres';
 import jobs from'./data/jobs';
 import trainings from'./data/trainings';
 
-console.log(contents());
 export const state = () => ({
-  contents: contents(),
-  genres: genres(),
-  jobs: jobs(),
-  trainings: trainings(),
+  contents: [],
+  genres: [],
+  jobs: [],
+  trainings: [],
 });
-export const mutations = () => ({});
+export const mutations = {
+  init(state) {
+    state.contents = contents();
+    state.genres = genres();
+    state.jobs = jobs();
+    state.trainings = trainings();
+  }
+};

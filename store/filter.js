@@ -131,3 +131,24 @@ const masterpieces = [ // 傑作掛け合わせ一覧（genre * content）
   { genre_id: 18, content_ids: [ null ] },
   { genre_id: 19, content_ids: [ null ] }
 ];
+
+export const state = () => ({
+  selectedCompany: 0,
+  selectedGenre: 0,
+  selectedContent: 0,
+  selectedJob: 0,
+  selectedPopularity: 0,
+});
+export const mutations = {
+  change(state, value) {
+    const key = {
+      companies: 'selectedCompany',
+      genres: 'selectedGenre',
+      contents: 'selectedContent',
+      jobs: 'selectedJob',
+      popularityes: 'selectedPopularity',
+    }
+    state[key[value.type]] = value.value;
+  }
+};
+
