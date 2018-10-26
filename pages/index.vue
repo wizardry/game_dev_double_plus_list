@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <filter-selector type="companies"/>
+      <filter-selector type="offices"/>
       <hr />
       <accordion-list
         label="傑作一覧"
@@ -27,23 +27,21 @@ import AccordionList from '~/components/AccordionList.vue'
 import DataList from '~/components/DataList.vue'
 import JobSelector from '~/components/JobSelector.vue'
 import FilterSelector from '~/components/FilterSelector.vue'
-import CompanyFilter from '~/components/CompanyFilter.vue'
+import OfficeFilter from '~/components/OfficeFilter.vue'
 import PopularityFilter from '~/components/PopularityFilter.vue'
 
 export default {
   components: {
     FixedStatus,
     AccordionList,
-    CompanyFilter,
+    OfficeFilter,
     DataList,
     FilterSelector,
     JobSelector,
     PopularityFilter,
   },
   mounted() {
-    console.log(this.$store)
     this.$store.commit('data/init');
-    console.log(this.$store.getters['data/filterdGenres']);
   }
 }
 </script>

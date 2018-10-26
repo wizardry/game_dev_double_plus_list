@@ -1,5 +1,5 @@
 export const state = () => ({
-  selectedCompany: 0,
+  selectedOffice: 0,
   selectedGenre: 0,
   selectedContent: 0,
   selectedJob: 0,
@@ -8,7 +8,7 @@ export const state = () => ({
 export const mutations = {
   change(state, value) {
     const key = {
-      companies: 'selectedCompany',
+      offices: 'selectedOffice',
       genres: 'selectedGenre',
       contents: 'selectedContent',
       jobs: 'selectedJob',

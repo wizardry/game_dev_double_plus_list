@@ -24,7 +24,6 @@ export default {
     }
   },
   mounted() {
-    console.log(0)
   }
 }
 </script>
