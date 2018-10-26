@@ -1,4 +1,4 @@
-export default () => [
+export default () => ([
   {
     "name": "スポーツ",
     "popularity": 0,
@@ -394,4 +394,4 @@ export default () => [
     "popularity": 1,
     "id": 78
   }
-]
+]);

@@ -29,14 +29,23 @@ export default {
   },
   computed: {
     options() {
-      console.log('a');
+      console.log(this.$store.state.data)
       const options = {
-        contents: this.$store.getters['data/filterContentByOfficeLv'].map((content)=> {
-          return { name: content.content.name, id:content.content_id };
-        }),
-        genres: this.$store.state.data.genres,
-        jobs: this.$store.state.data.jobs,
-        trainings: this.$store.state.data.trainings,
+        contents: [
+          { name: '選択しない', id: 999, },
+          ...this.$store.getters['data/filterContentByOfficeLv'].map((content)=> {
+            return { name: content.content.name, id:content.content_id };
+          }),
+        ],
+        genres: Object.keys(this.$store.state.data.genres).length > 1
+          ? [{ name: '選択しない', id: 999, }, ...this.$store.state.data.genres,]
+          : this.$store.state.data.genres,
+        jobs: Object.keys(this.$store.state.data.jobs).length > 1
+          ? [{ name: '選択しない', id: 999, }, ...this.$store.state.data.jobs,]
+          : this.$store.state.data.jobs,
+        trainings: Object.keys(this.$store.state.data.trainings).length > 1
+          ? [{ name: '選択しない', id: 999, }, ...this.$store.state.data.trainings,]
+          : this.$store.state.data.trainings,
         offices,
       };
 
