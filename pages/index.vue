@@ -1,13 +1,17 @@
 <template>
-  <section class="container">
-    <div>
+  <section>
+    <div class="officeFilterBox">
       <filter-selector type="offices"/>
-      <hr />
+    </div>
+    <hr />
+    <div>
       <accordion-list
         label="傑作一覧"
       >
-        <filter-selector type="genres" />
-        <filter-selector type="contents" />
+        <ul class="filterSelectorList">
+          <li><filter-selector type="genres" /></li>
+          <li><filter-selector type="contents" /></li>
+        </ul>
         <data-list type="masterpiece" />
       </accordion-list>
       <accordion-list
@@ -46,7 +50,37 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+select {
+  padding: 16px;
+  width: 100%;
+  display: block;
+}
+
+.officeFilterBox {
+  padding: 16px;
+  background: url("~assets/images/top.gif");
+  background-size: cover;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterSelectorList {
+  padding: 0;
+  margin: 0 -8px;
+  list-style: none;
+  display: flex;
+
+  li {
+    width: 50%;
+    margin:0 8px;
+
+  }
+}
+
+
 .container {
   min-height: 100vh;
   display: flex;

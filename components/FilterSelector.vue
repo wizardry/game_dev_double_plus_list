@@ -68,6 +68,10 @@ export default {
 
 }
 </script>
-<style>
+<style lang="scss">
+.FilterSelector {
+  display: block;
+  width: 100%;
+}
 </style>
 

@@ -222,6 +222,7 @@ export const getters = {
       return {
         genre_id: piece.genre_id,
         genre: getters.getGenreById(piece.genre_id),
+        content_ids: piece.content_ids,
         contents,
       }
     });
